@@ -14,12 +14,12 @@ import java.util.List;
 import java.util.Locale;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class EarthquakeRecyclerViewAdapter extends
-        RecyclerView.Adapter<EarthquakeRecyclerViewAdapter.ViewHolder> {
+public class EarthquakeRecyclerViewAdapter extends RecyclerView.Adapter<EarthquakeRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Earthquake> mEarthquakes;
+    private List<Earthquake> mEarthquakes;
 
     private static final SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("HH:mm", Locale.US);
     private static final NumberFormat MAGNITUDE_FORMAT = new DecimalFormat("0.0");
@@ -39,13 +39,40 @@ public class EarthquakeRecyclerViewAdapter extends
         Earthquake earthquake = mEarthquakes.get(position);
         holder.date.setText(TIME_FORMAT.format(earthquake.getDate()));
         holder.details.setText(earthquake.getDetails());
-        holder.magnitude.setText(
-                MAGNITUDE_FORMAT.format(earthquake.getMagnitude()));
+        holder.magnitude.setText(MAGNITUDE_FORMAT.format(earthquake.getMagnitude()));
     }
 
     @Override
     public int getItemCount() {
         return mEarthquakes.size();
+    }
+
+    public void setData(final List<Earthquake> newEarthquakes) {
+        final List<Earthquake> oldEarthquakes = mEarthquakes;
+
+        mEarthquakes = newEarthquakes;
+
+        DiffUtil.calculateDiff(new DiffUtil.Callback() {
+            @Override
+            public int getOldListSize() {
+                return oldEarthquakes != null ? oldEarthquakes.size() : 0;
+            }
+
+            @Override
+            public int getNewListSize() {
+                return newEarthquakes != null ? newEarthquakes.size() : 0;
+            }
+
+            @Override
+            public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                return oldEarthquakes.get(oldItemPosition).getId().equals(newEarthquakes.get(newItemPosition).getId());
+            }
+
+            @Override
+            public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                return true;
+            }
+        }).dispatchUpdatesTo(this);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

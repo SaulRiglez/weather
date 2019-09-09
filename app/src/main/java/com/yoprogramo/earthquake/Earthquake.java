@@ -26,12 +26,12 @@ public class Earthquake {
   public Earthquake(String id, Date date, String details,
                     Location location,
                     double magnitude, String link) {
-    mId = id;
-    mDate = date;
-    mDetails = details;
-    mLocation = location;
-    mMagnitude = magnitude;
-    mLink = link;
+    this.mId = id;
+    this.mDate = date;
+    this.mDetails = details;
+    this.mLocation = location;
+    this.mMagnitude = magnitude;
+    this.mLink = link;
   }
 
   @Override

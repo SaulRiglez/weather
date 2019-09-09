@@ -19,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 public class EarthquakeListFragment extends Fragment {
 
     private ArrayList<Earthquake> mEarthquakes = new ArrayList<Earthquake>();
-
     private EarthquakeRecyclerViewAdapter mEarthquakeAdapter = new EarthquakeRecyclerViewAdapter(mEarthquakes);
 
     private RecyclerView mRecyclerView;
@@ -48,11 +47,13 @@ public class EarthquakeListFragment extends Fragment {
     }
 
     public void setEarthquakes(List<Earthquake> earthquakes) {
-        for (Earthquake earthquake : earthquakes) {
-            if (!mEarthquakes.contains(earthquake)) {
-                mEarthquakes.add(earthquake);
-                mEarthquakeAdapter.notifyItemInserted(mEarthquakes.indexOf(earthquake));
-            }
-        }
+//        for (Earthquake earthquake : earthquakes) {
+//            if (!mEarthquakes.contains(earthquake)) {
+//                mEarthquakes.add(earthquake);
+//                mEarthquakeAdapter.notifyItemInserted(mEarthquakes.indexOf(earthquake));
+//            }
+//        }
+
+        mEarthquakeAdapter.setData(earthquakes);
     }
 }
