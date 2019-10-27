@@ -1,14 +1,14 @@
-package com.yoprogramo.earthquake.mvvm;
+package com.yoprogramo.earthquake.earth.mvvm;
 
 import android.app.Application;
 import android.location.Location;
 import android.util.Log;
 
-import com.yoprogramo.earthquake.Earthquake;
-import com.yoprogramo.earthquake.RetrofitHelper;
-import com.yoprogramo.earthquake.model.Feature;
-import com.yoprogramo.earthquake.model.FeatureCollection;
-import com.yoprogramo.earthquake.model.Properties;
+import com.yoprogramo.earthquake.earth.model.Earthquake;
+import com.yoprogramo.earthquake.earth.util.RetrofitHelper;
+import com.yoprogramo.earthquake.earth.model.Feature;
+import com.yoprogramo.earthquake.earth.model.FeatureCollection;
+import com.yoprogramo.earthquake.earth.model.Properties;
 
 import java.util.ArrayList;
 import java.util.Date;

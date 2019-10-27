@@ -1,7 +1,10 @@
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.yoprogramo.earthquake.R;
+import com.yoprogramo.earthquake.StarSignAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".HyperLinkHandlerActivity" android:launchMode="singleTask">
+        <activity android:name=".earth.view.HyperLinkHandlerActivity" android:launchMode="singleTask">
             <intent-filter android:autoVerify="true">
             <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -24,7 +24,7 @@
         <activity android:name=".PickerTesterActivity">
 
         </activity>
-        <activity android:name=".StarSignPrickerActivity">
+        <activity android:name=".earth.view.StarSignPrickerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.PICK" />
 
@@ -33,8 +33,8 @@
                 <data android:scheme="starsigns" />
             </intent-filter>
         </activity>
-        <activity android:name=".CompassActivity"></activity>
-        <activity android:name=".EarthquakeMainActivity" >
+        <activity android:name=".earth.view.CompassActivity"></activity>
+        <activity android:name=".earth.view.EarthquakeMainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

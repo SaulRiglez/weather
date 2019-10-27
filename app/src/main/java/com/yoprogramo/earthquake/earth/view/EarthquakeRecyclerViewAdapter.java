@@ -1,11 +1,13 @@
 
 
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.view;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.yoprogramo.earthquake.R;
 import com.yoprogramo.earthquake.databinding.ListItemEarthquakeBinding;
+import com.yoprogramo.earthquake.earth.model.Earthquake;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

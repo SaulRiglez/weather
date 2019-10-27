@@ -1,10 +1,10 @@
-package com.yoprogramo.earthquake.mvvm;
+package com.yoprogramo.earthquake.earth.mvvm;
 
 import android.location.Location;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.yoprogramo.earthquake.Earthquake;
+import com.yoprogramo.earthquake.earth.model.Earthquake;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

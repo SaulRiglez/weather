@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CompassActivity">
+    tools:context=".earth.view.CompassActivity">
 
-    <com.yoprogramo.earthquake.view.CompassView
+    <com.yoprogramo.earthquake.earth.view.CompassView
         android:id="@+id/compassView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

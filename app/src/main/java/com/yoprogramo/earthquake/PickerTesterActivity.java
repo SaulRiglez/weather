@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.yoprogramo.earthquake.earth.view.StarSignPrickerActivity;
+
 import java.util.regex.Pattern;
 
 import androidx.annotation.Nullable;

@@ -1,4 +1,4 @@
-package com.yoprogramo.earthquake.view;
+package com.yoprogramo.earthquake.earth.view;
 
 import android.content.Context;
 import android.content.res.Resources;

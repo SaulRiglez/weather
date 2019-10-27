@@ -1,10 +1,12 @@
 
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.view;
 
 import android.os.Bundle;
 
+import com.yoprogramo.earthquake.R;
 import com.yoprogramo.earthquake.databinding.ActivityEarthquakeMainBindingImpl;
-import com.yoprogramo.earthquake.mvvm.EarthquakeViewModel;
+import com.yoprogramo.earthquake.earth.model.Earthquake;
+import com.yoprogramo.earthquake.earth.mvvm.EarthquakeViewModel;
 
 import java.util.List;
 

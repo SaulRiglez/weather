@@ -1,6 +1,6 @@
 
 
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.model;
 
 import android.location.Location;
 

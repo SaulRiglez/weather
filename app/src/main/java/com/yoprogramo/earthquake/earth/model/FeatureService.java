@@ -1,4 +1,4 @@
-package com.yoprogramo.earthquake.model;
+package com.yoprogramo.earthquake.earth.model;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

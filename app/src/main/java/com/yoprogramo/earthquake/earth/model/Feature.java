@@ -1,5 +1,5 @@
 
-package com.yoprogramo.earthquake.model;
+package com.yoprogramo.earthquake.earth.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

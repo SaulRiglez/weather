@@ -1,4 +1,4 @@
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.view;
 
 import android.os.Bundle;
 import android.util.Log;

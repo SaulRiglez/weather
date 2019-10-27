@@ -1,7 +1,7 @@
-package com.yoprogramo.earthquake;
+package com.yoprogramo.earthquake.earth.util;
 
-import com.yoprogramo.earthquake.model.FeatureCollection;
-import com.yoprogramo.earthquake.model.FeatureService;
+import com.yoprogramo.earthquake.earth.model.FeatureCollection;
+import com.yoprogramo.earthquake.earth.model.FeatureService;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
