@@ -16,10 +16,10 @@ public class Properties implements Serializable {
     private String place;
     @SerializedName("time")
     @Expose
-    private Integer time;
+    private Long time;
     @SerializedName("updated")
     @Expose
-    private Integer updated;
+    private Long updated;
     @SerializedName("tz")
     @Expose
     private Integer tz;
@@ -76,7 +76,7 @@ public class Properties implements Serializable {
     private Double rms;
     @SerializedName("gap")
     @Expose
-    private Integer gap;
+    private Double gap;
     @SerializedName("magType")
     @Expose
     private String magType;
@@ -103,19 +103,19 @@ public class Properties implements Serializable {
         this.place = place;
     }
 
-    public Integer getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(Integer time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 
-    public Integer getUpdated() {
+    public Long getUpdated() {
         return updated;
     }
 
-    public void setUpdated(Integer updated) {
+    public void setUpdated(Long updated) {
         this.updated = updated;
     }
 
@@ -263,11 +263,11 @@ public class Properties implements Serializable {
         this.rms = rms;
     }
 
-    public Integer getGap() {
+    public Double getGap() {
         return gap;
     }
 
-    public void setGap(Integer gap) {
+    public void setGap(Double gap) {
         this.gap = gap;
     }
 
