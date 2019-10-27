@@ -46,7 +46,6 @@ public class FetchDataAsyncTask extends AsyncTask<Void, Void, List<Earthquake>> 
         URL url;
         try {
             url = new URL(QUAKE_FEED);
-
             URLConnection connection;
             connection = url.openConnection();
 
