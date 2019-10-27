@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PriceTextView">
+        <attr name="price" format="reference|float" />
+    </declare-styleable>
+
+    <declare-styleable name="CompassView">
+        <attr name="bearing" format="reference|float" />
+
+        <!--the flag reference enable to use refences to values using @-->
+    </declare-styleable>
+</resources>

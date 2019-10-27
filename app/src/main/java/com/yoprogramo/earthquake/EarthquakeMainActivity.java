@@ -4,20 +4,21 @@ package com.yoprogramo.earthquake;
 import android.os.Bundle;
 
 import com.yoprogramo.earthquake.databinding.ActivityEarthquakeMainBindingImpl;
+import com.yoprogramo.earthquake.mvvm.EarthquakeViewModel;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 public class EarthquakeMainActivity extends AppCompatActivity {
 
     private static final String TAG_LIST_FRAGMENT = "TAG_LIST_FRAGMENT";
+    EarthquakeViewModel earthquakeViewModel;
 
 
     EarthquakeListFragment mEarthquakeListFragment;
@@ -46,10 +47,19 @@ public class EarthquakeMainActivity extends AppCompatActivity {
                     (EarthquakeListFragment) fm.findFragmentByTag(TAG_LIST_FRAGMENT);
         }
 
-        Date now = Calendar.getInstance().getTime();
-        List<Earthquake> dummyQuakes = new ArrayList<Earthquake>(0);
-        dummyQuakes.add(new Earthquake("0", now, "San Jose", null, 7.3, null));
-        dummyQuakes.add(new Earthquake("1", now, "LA", null, 6.5, null));
-        mEarthquakeListFragment.setEarthquakes(dummyQuakes);
+        earthquakeViewModel = ViewModelProviders.of(this).get(EarthquakeViewModel.class);
+
+        earthquakeViewModel.getEarthquakes().observe(this, new Observer<List<Earthquake>>() {
+            @Override
+            public void onChanged(List<Earthquake> earthquakes) {
+                mEarthquakeListFragment.setEarthquakes(earthquakes);
+            }
+        });
+
+//        Date now = Calendar.getInstance().getTime();
+//        List<Earthquake> dummyQuakes = new ArrayList<Earthquake>(0);
+//        dummyQuakes.add(new Earthquake("0", now, "San Jose", null, 7.3, null));
+//        dummyQuakes.add(new Earthquake("1", now, "LA", null, 6.5, null));
+//        mEarthquakeListFragment.setEarthquakes(dummyQuakes);
     }
 }

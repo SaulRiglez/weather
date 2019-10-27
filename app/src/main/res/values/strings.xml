@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">earthquake</string>
+    <string name="cardinal_north">N</string>
+    <string name="cardinal_east">E</string>
+    <string name="cardinal_south">s</string>
+    <string name="cardinal_weast">W</string>
+
+    <string name="earthquake_feed"></string>
 </resources>
